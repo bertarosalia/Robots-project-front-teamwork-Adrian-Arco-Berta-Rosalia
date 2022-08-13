@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import IRobot from "./interfaces/interfaces";
+import IRobot from "../interfaces/interfaces";
 
 const initialStateRobots: IRobot[] = [];
 

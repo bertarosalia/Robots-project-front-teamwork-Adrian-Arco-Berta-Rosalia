@@ -1,4 +1,4 @@
-import IRobot from "./interfaces/interfaces";
+import IRobot from "../interfaces/interfaces";
 import robotsReducer, { loadAllRobots } from "./robotsSlice";
 
 describe("Given a robotsReducer function", () => {
