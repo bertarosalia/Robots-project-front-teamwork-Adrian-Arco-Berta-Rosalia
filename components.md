@@ -3,8 +3,7 @@
 - Array de robots.
 - Robot:
   - Objeto:
-    - Propiedades: - Name:
-      -String - Url (imagen) - String - Velocidad: - Del 0 al 10 - NUmber - Resistencia: - Number - Del 0 al 10 - Fecha de creación - String
+    - Propiedades: - Name: String - Url (imagen) String - Velocidad: Del 0 al 10 NUmber - Resistencia: Number - Del 0 al 10 - Fecha de creación - String
 
 #Components:
 
