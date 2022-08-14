@@ -1,5 +1,17 @@
+import useApi from "./hooks/useApi";
+
 const App = (): JSX.Element => {
-  return <div className="App"></div>;
+  const { getAll } = useApi();
+
+  return (
+    <div className="App">
+      <button
+        onClick={() => {
+          getAll();
+        }}
+      ></button>
+    </div>
+  );
 };
 
 export default App;

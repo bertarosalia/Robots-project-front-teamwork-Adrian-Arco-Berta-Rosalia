@@ -3,11 +3,11 @@ import IRobot from "../interfaces/interfaces";
 
 const initialStateRobots: IRobot[] = [];
 
-const robotsSlice = createSlice({
+export const robotsSlice = createSlice({
   name: "robots",
   initialState: initialStateRobots,
   reducers: {
-    loadAllRobots: (state, action: PayloadAction<IRobot[]>) => action.payload,
+    loadAllRobots: (_state, action: PayloadAction<IRobot[]>) => action.payload,
   },
 });
 
