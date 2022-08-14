@@ -1,4 +1,4 @@
-import CardStyled from "../CardStyled";
+import CardStyled from "./CardStyled";
 
 interface CardProps {
   name: string;
@@ -16,6 +16,7 @@ const Card = ({
 }: CardProps): JSX.Element => {
   return (
     <CardStyled>
+      <h2 className="card__title"> {name}</h2>
       <img
         width={"180px"}
         height={"200px"}
@@ -23,12 +24,11 @@ const Card = ({
         src={urlImage}
         alt={name}
       />
-      <div className="card__info-block">
-        <span className="info-block__info">Name: {name}</span>
-        <span className="info-block__info">Speed: {speed}</span>
-        <span className="info-block__info">Endurance: {endurance}</span>
-        <span className="info-block__info">Creation date: {creationDate}</span>
-      </div>
+      <ul className="card__info-block">
+        <li className="info-block__info">Speed: {speed}</li>
+        <li className="info-block__info">Endurance: {endurance}</li>
+        <li className="info-block__info">Creation date: {creationDate}</li>
+      </ul>
     </CardStyled>
   );
 };

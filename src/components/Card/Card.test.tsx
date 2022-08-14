@@ -30,5 +30,55 @@ describe("Given a Card component", () => {
       expect((cardImage as HTMLImageElement).alt).toBe(fakeRobot.name);
       expect(cardImage).toBeInTheDocument();
     });
+
+    test("And it should show a header with the robot name", () => {
+      render(
+        <Card
+          creationDate={fakeRobot.creationDate}
+          endurance={fakeRobot.endurance}
+          name={fakeRobot.name}
+          speed={fakeRobot.speed}
+          urlImage={fakeRobot.urlImg}
+          key={fakeRobot.name}
+        ></Card>
+      );
+      const title = screen.getByRole("heading");
+
+      expect(title).toHaveTextContent(fakeRobot.name);
+    });
+
+    test("And it should show a list with the robot stats", () => {
+      render(
+        <Card
+          creationDate={fakeRobot.creationDate}
+          endurance={fakeRobot.endurance}
+          name={fakeRobot.name}
+          speed={fakeRobot.speed}
+          urlImage={fakeRobot.urlImg}
+          key={fakeRobot.name}
+        ></Card>
+      );
+      const list = screen.getByRole("list");
+
+      expect(list).toBeInTheDocument();
+    });
+
+    test("And it should show the stats of the robot", () => {
+      const lengthExpected = 3;
+      render(
+        <Card
+          creationDate={fakeRobot.creationDate}
+          endurance={fakeRobot.endurance}
+          name={fakeRobot.name}
+          speed={fakeRobot.speed}
+          urlImage={fakeRobot.urlImg}
+          key={fakeRobot.name}
+        ></Card>
+      );
+
+      const listItem = screen.getAllByRole("listitem");
+
+      expect(listItem).toHaveLength(lengthExpected);
+    });
   });
 });
