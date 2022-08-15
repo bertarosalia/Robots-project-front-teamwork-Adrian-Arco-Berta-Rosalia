@@ -1,10 +1,6 @@
 import { renderHook, waitFor } from "@testing-library/react";
 import * as reactRedux from "react-redux";
-import { useSelector } from "react-redux";
-import IRobot from "../features/store/interfaces/interfaces";
-import robotsReducer, {
-  robotsSlice,
-} from "../features/store/slice/robotsSlice";
+import { robotsSlice } from "../features/store/slice/robotsSlice";
 import { store } from "../features/store/store";
 import useApi from "./useApi";
 
@@ -33,6 +29,7 @@ describe("Given a useApi custom hook", () => {
             endurance: 0,
             speed: 0,
             urlImg: "",
+            id: "",
           },
         ],
       };

@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import IRobot from "../../features/store/interfaces/interfaces";
+import { IRobot } from "../../features/interfaces/interfaces";
 import Card from "./Card";
 
 describe("Given a Card component", () => {
@@ -10,6 +10,7 @@ describe("Given a Card component", () => {
       endurance: 0,
       speed: 0,
       urlImg: "aas",
+      id: "",
     };
     test("Then it should show an image with the robot", () => {
       render(
@@ -18,7 +19,7 @@ describe("Given a Card component", () => {
           endurance={fakeRobot.endurance}
           name={fakeRobot.name}
           speed={fakeRobot.speed}
-          urlImage={fakeRobot.urlImg}
+          urlImg={fakeRobot.urlImg}
           key={fakeRobot.name}
         ></Card>
       );
@@ -38,7 +39,7 @@ describe("Given a Card component", () => {
           endurance={fakeRobot.endurance}
           name={fakeRobot.name}
           speed={fakeRobot.speed}
-          urlImage={fakeRobot.urlImg}
+          urlImg={fakeRobot.urlImg}
           key={fakeRobot.name}
         ></Card>
       );
@@ -54,7 +55,7 @@ describe("Given a Card component", () => {
           endurance={fakeRobot.endurance}
           name={fakeRobot.name}
           speed={fakeRobot.speed}
-          urlImage={fakeRobot.urlImg}
+          urlImg={fakeRobot.urlImg}
           key={fakeRobot.name}
         ></Card>
       );
@@ -71,7 +72,7 @@ describe("Given a Card component", () => {
           endurance={fakeRobot.endurance}
           name={fakeRobot.name}
           speed={fakeRobot.speed}
-          urlImage={fakeRobot.urlImg}
+          urlImg={fakeRobot.urlImg}
           key={fakeRobot.name}
         ></Card>
       );

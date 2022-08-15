@@ -1,5 +1,11 @@
+import Form from "./components/Form/Form";
+
 const App = (): JSX.Element => {
-  return <div className="App"></div>;
+  return (
+    <>
+      <Form />
+    </>
+  );
 };
 
 export default App;
