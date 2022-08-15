@@ -1,4 +1,5 @@
 interface IRobot {
+  id: string;
   name: string;
   speed: number;
   endurance: number;

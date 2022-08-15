@@ -5,6 +5,7 @@ import Card from "./Card";
 describe("Given a Card component", () => {
   describe("When it's instantiated with a robot", () => {
     const fakeRobot: IRobot = {
+      id: "",
       name: "",
       creationDate: "",
       endurance: 0,
@@ -19,7 +20,7 @@ describe("Given a Card component", () => {
           name={fakeRobot.name}
           speed={fakeRobot.speed}
           urlImage={fakeRobot.urlImg}
-          key={fakeRobot.name}
+          id={fakeRobot.name}
         ></Card>
       );
 
@@ -39,7 +40,7 @@ describe("Given a Card component", () => {
           name={fakeRobot.name}
           speed={fakeRobot.speed}
           urlImage={fakeRobot.urlImg}
-          key={fakeRobot.name}
+          id={fakeRobot.id}
         ></Card>
       );
       const title = screen.getByRole("heading");
@@ -55,7 +56,7 @@ describe("Given a Card component", () => {
           name={fakeRobot.name}
           speed={fakeRobot.speed}
           urlImage={fakeRobot.urlImg}
-          key={fakeRobot.name}
+          id={fakeRobot.id}
         ></Card>
       );
       const list = screen.getByRole("list");
@@ -72,7 +73,7 @@ describe("Given a Card component", () => {
           name={fakeRobot.name}
           speed={fakeRobot.speed}
           urlImage={fakeRobot.urlImg}
-          key={fakeRobot.name}
+          id={fakeRobot.id}
         ></Card>
       );
 

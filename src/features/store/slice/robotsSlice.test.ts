@@ -17,7 +17,14 @@ describe("Given a robotsReducer function", () => {
   describe("When its instantiated with a loadallRobots action and a new robot state", () => {
     test("Then it should return the new state with the robots", () => {
       const newRobots: IRobot[] = [
-        { name: "", creationDate: "", endurance: 0, speed: 0, urlImg: "" },
+        {
+          id: "",
+          name: "",
+          creationDate: "",
+          endurance: 0,
+          speed: 0,
+          urlImg: "",
+        },
       ];
 
       const returnfromReducer = robotsReducer(

@@ -1,6 +1,7 @@
 import CardStyled from "./CardStyled";
 
 interface CardProps {
+  id: string;
   name: string;
   speed: number;
   endurance: number;
@@ -8,6 +9,7 @@ interface CardProps {
   creationDate: string;
 }
 const Card = ({
+  id,
   creationDate,
   endurance,
   name,
