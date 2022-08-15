@@ -1,7 +1,10 @@
 import CardStyled from "./CardStyled";
 
 interface CardProps {
+<<<<<<< HEAD
   id: string;
+=======
+>>>>>>> master
   name: string;
   speed: number;
   endurance: number;
@@ -9,7 +12,10 @@ interface CardProps {
   creationDate: string;
 }
 const Card = ({
+<<<<<<< HEAD
   id,
+=======
+>>>>>>> master
   creationDate,
   endurance,
   name,
