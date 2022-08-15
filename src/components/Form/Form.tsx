@@ -38,6 +38,7 @@ const Form = (): JSX.Element => {
       <div className="form__container">
         <h2 className="form__title">New Robot</h2>
         <form
+          data-testid="form"
           autoComplete="off"
           className="form"
           noValidate
