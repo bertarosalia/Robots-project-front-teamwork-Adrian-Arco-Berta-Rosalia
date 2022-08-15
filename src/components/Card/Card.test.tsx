@@ -21,6 +21,7 @@ describe("Given a Card component", () => {
           speed={fakeRobot.speed}
           urlImg={fakeRobot.urlImg}
           key={fakeRobot.id}
+          id={fakeRobot.id}
         ></Card>
       );
 
@@ -41,6 +42,7 @@ describe("Given a Card component", () => {
           speed={fakeRobot.speed}
           urlImg={fakeRobot.urlImg}
           key={fakeRobot.id}
+          id={fakeRobot.id}
         ></Card>
       );
       const title = screen.getByRole("heading");
@@ -57,6 +59,7 @@ describe("Given a Card component", () => {
           speed={fakeRobot.speed}
           urlImg={fakeRobot.urlImg}
           key={fakeRobot.id}
+          id={fakeRobot.id}
         ></Card>
       );
       const list = screen.getByRole("list");
@@ -72,6 +75,7 @@ describe("Given a Card component", () => {
           endurance={fakeRobot.endurance}
           name={fakeRobot.name}
           speed={fakeRobot.speed}
+          id={fakeRobot.id}
           urlImg={fakeRobot.urlImg}
           key={fakeRobot.id}
         ></Card>

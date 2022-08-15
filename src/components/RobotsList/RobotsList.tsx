@@ -26,7 +26,8 @@ const RobotsList = (): JSX.Element => {
               speed={robot.speed}
               endurance={robot.endurance}
               creationDate={robot.creationDate}
-              key={robot.id}
+              key={robot.name}
+              id={robot.id}
             />
           ))}
         </section>

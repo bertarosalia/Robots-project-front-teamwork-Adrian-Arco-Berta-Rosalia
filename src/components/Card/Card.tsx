@@ -6,6 +6,7 @@ interface CardProps {
   name: string;
   speed: number;
   urlImg: string;
+  id: string;
 }
 const Card = ({
   creationDate,
@@ -13,6 +14,7 @@ const Card = ({
   name,
   speed,
   urlImg,
+  id,
 }: CardProps): JSX.Element => {
   return (
     <CardStyled>
@@ -25,9 +27,15 @@ const Card = ({
         alt={name}
       />
       <ul className="card__info-block">
-        <li className="info-block__info">Speed: {speed}</li>
-        <li className="info-block__info">Endurance: {endurance}</li>
-        <li className="info-block__info">Creation date: {creationDate}</li>
+        <li key={id} className="info-block__info">
+          Speed: {speed}
+        </li>
+        <li key={id} className="info-block__info">
+          Endurance: {endurance}
+        </li>
+        <li key={id} className="info-block__info">
+          Creation date: {creationDate}
+        </li>
       </ul>
     </CardStyled>
   );
