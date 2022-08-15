@@ -1,5 +1,5 @@
-import IRobot from "../interfaces/interfaces";
-import robotsReducer, { loadAllRobots } from "./robotsSlice";
+import { IRobot } from "../../interfaces/interfaces";
+import robotsReducer, { loadAllRobotsActionCreator } from "./robotsSlice";
 
 describe("Given a robotsReducer function", () => {
   const initialState: IRobot[] = [];
@@ -29,7 +29,7 @@ describe("Given a robotsReducer function", () => {
 
       const returnfromReducer = robotsReducer(
         initialState,
-        loadAllRobots(newRobots)
+        loadAllRobotsActionCreator(newRobots)
       );
 
       expect(returnfromReducer).toStrictEqual(newRobots);

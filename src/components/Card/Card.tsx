@@ -1,20 +1,20 @@
 import CardStyled from "./CardStyled";
 
 interface CardProps {
-  id: string;
+  creationDate: string;
+  endurance: number;
   name: string;
   speed: number;
-  endurance: number;
-  urlImage: string;
-  creationDate: string;
+  urlImg: string;
+  id: string;
 }
 const Card = ({
-  id,
   creationDate,
   endurance,
   name,
   speed,
-  urlImage,
+  urlImg,
+  id,
 }: CardProps): JSX.Element => {
   return (
     <CardStyled>
@@ -23,13 +23,19 @@ const Card = ({
         width={"180px"}
         height={"200px"}
         className="card__image"
-        src={urlImage}
+        src={urlImg}
         alt={name}
       />
       <ul className="card__info-block">
-        <li className="info-block__info">Speed: {speed}</li>
-        <li className="info-block__info">Endurance: {endurance}</li>
-        <li className="info-block__info">Creation date: {creationDate}</li>
+        <li key={id} className="info-block__info">
+          Speed: {speed}
+        </li>
+        <li key={id} className="info-block__info">
+          Endurance: {endurance}
+        </li>
+        <li key={id} className="info-block__info">
+          Creation date: {creationDate}
+        </li>
       </ul>
     </CardStyled>
   );
