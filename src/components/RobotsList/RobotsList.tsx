@@ -8,7 +8,7 @@ import RobotsListStyled from "./RobotsListStyled";
 
 const RobotsList = (): JSX.Element => {
   const { getAll } = useApi();
-  const pepito = useSelector((state: RootState) => state.robotsReducer);
+  const robots = useSelector((state: RootState) => state.robotsReducer);
 
   useEffect(() => {
     getAll();
@@ -19,7 +19,7 @@ const RobotsList = (): JSX.Element => {
       <RobotsListStyled>
         <h1 className="robots-list__title">Robots</h1>
         <section className="robots-list">
-          {pepito.map((robot: IRobot) => (
+          {robots.map((robot: IRobot) => (
             <Card
               id={robot.id}
               urlImage={robot.urlImg}
