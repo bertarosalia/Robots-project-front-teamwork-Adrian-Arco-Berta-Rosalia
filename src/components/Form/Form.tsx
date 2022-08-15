@@ -20,7 +20,6 @@ const Form = (): JSX.Element => {
       ...newRobot,
       [event.target.id]: event.target.value,
     });
-    console.log(newRobot);
   };
 
   const hasEmptyFields =
@@ -31,8 +30,8 @@ const Form = (): JSX.Element => {
 
   const createNewRobot = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log(newRobot, "soy el robot para crear");
     await createRobot(newRobot);
+    setNewRobot(initialRobot);
   };
   return (
     <FormStyled>
