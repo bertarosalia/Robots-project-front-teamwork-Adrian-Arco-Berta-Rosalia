@@ -58,6 +58,7 @@ const Form = (): JSX.Element => {
             <input
               type="url"
               id="urlImg"
+              value={newRobot.urlImg}
               onChange={onChangeField}
               className="form__input"
             />
@@ -65,6 +66,7 @@ const Form = (): JSX.Element => {
           <div className="form__group">
             <label htmlFor="creationDate">Creation Date</label>
             <input
+              value={newRobot.creationDate}
               type="text"
               id="creationDate"
               onChange={onChangeField}
@@ -74,6 +76,7 @@ const Form = (): JSX.Element => {
           <div className="form__group">
             <label htmlFor="speed">Speed</label>
             <input
+              value={newRobot.speed}
               type="number"
               max={10}
               min={0}
@@ -85,6 +88,7 @@ const Form = (): JSX.Element => {
           <div className="form__group">
             <label htmlFor="endurance">Endurance</label>
             <input
+              value={newRobot.endurance}
               type="number"
               max={10}
               min={0}
