@@ -20,16 +20,16 @@ jest.mock("react-redux", () => ({
 
 describe("Given a useApi custom hook", () => {
   describe("When it's invoked with his method getAll", () => {
-    test("Then it should call the fetch method", async () => {
+    test("Then it should dispatch the fetch response", async () => {
       const mockedFetchValue = {
         AllRobots: [
           {
+            id: "",
             name: "",
             creationDate: "",
             endurance: 0,
             speed: 0,
             urlImg: "",
-            id: "",
           },
         ],
       };

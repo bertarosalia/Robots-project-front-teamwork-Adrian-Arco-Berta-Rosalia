@@ -18,12 +18,12 @@ describe("Given a robotsReducer function", () => {
     test("Then it should return the new state with the robots", () => {
       const newRobots: IRobot[] = [
         {
+          id: "",
           name: "",
           creationDate: "",
           endurance: 0,
           speed: 0,
           urlImg: "",
-          id: "",
         },
       ];
 
