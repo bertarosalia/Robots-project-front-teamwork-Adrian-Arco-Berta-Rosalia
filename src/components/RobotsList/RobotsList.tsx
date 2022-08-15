@@ -8,7 +8,7 @@ import RobotsListStyled from "./RobotsListStyled";
 
 const RobotsList = (): JSX.Element => {
   const { getAll } = useApi();
-  const robots = useSelector((state: RootState) => state.robotsReducer);
+  const robots = useSelector((state: RootState) => state.robots);
 
   useEffect(() => {
     getAll();
@@ -21,12 +21,13 @@ const RobotsList = (): JSX.Element => {
         <section className="robots-list">
           {robots.map((robot: IRobot) => (
             <Card
-              id={robot.id}
-              urlImage={robot.urlImg}
+              urlImg={robot.urlImg}
               name={robot.name}
               speed={robot.speed}
               endurance={robot.endurance}
               creationDate={robot.creationDate}
+              key={robot.name}
+              id={robot.id}
             />
           ))}
         </section>
