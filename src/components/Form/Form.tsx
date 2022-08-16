@@ -25,8 +25,8 @@ const Form = (): JSX.Element => {
   const hasEmptyFields =
     newRobot.name === "" ||
     newRobot.urlImg === "" ||
-    newRobot.speed === -1 ||
-    newRobot.endurance === -1;
+    newRobot.speed === 0 ||
+    newRobot.endurance === 0;
 
   const createNewRobot = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -38,6 +38,7 @@ const Form = (): JSX.Element => {
       <div className="form__container">
         <h2 className="form__title">New Robot</h2>
         <form
+          data-testid="form"
           autoComplete="off"
           className="form"
           noValidate
@@ -46,6 +47,7 @@ const Form = (): JSX.Element => {
           <div className="form__group">
             <label htmlFor="name">Name</label>
             <input
+              data-testid="inputName"
               type="text"
               id="name"
               value={newRobot.name}
@@ -56,6 +58,7 @@ const Form = (): JSX.Element => {
           <div className="form__group">
             <label htmlFor="urlImg">Url</label>
             <input
+              data-testid="inputUrl"
               type="url"
               id="urlImg"
               value={newRobot.urlImg}
@@ -66,6 +69,7 @@ const Form = (): JSX.Element => {
           <div className="form__group">
             <label htmlFor="creationDate">Creation Date</label>
             <input
+              data-testid="inputDate"
               value={newRobot.creationDate}
               type="text"
               id="creationDate"
@@ -76,6 +80,7 @@ const Form = (): JSX.Element => {
           <div className="form__group">
             <label htmlFor="speed">Speed</label>
             <input
+              data-testid="inputSpeed"
               value={newRobot.speed}
               type="number"
               max={10}
@@ -88,6 +93,7 @@ const Form = (): JSX.Element => {
           <div className="form__group">
             <label htmlFor="endurance">Endurance</label>
             <input
+              data-testid="inputEndurance"
               value={newRobot.endurance}
               type="number"
               max={10}
