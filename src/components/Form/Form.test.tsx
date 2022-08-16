@@ -53,5 +53,38 @@ describe("Given a form component", () => {
         expect(inputName).toHaveValue(text);
       });
     });
+
+    test("Then if u write in the urlimage element it should render the new letters writed", async () => {
+      const text = "url";
+
+      render(
+        <Wrapper>
+          <Form />
+        </Wrapper>
+      );
+      const inputUrl = screen.getByTestId("inputUrl");
+      await userEvent.type(inputUrl, text);
+
+      await waitFor(() => {
+        expect(inputUrl).toHaveValue(text);
+      });
+    });
+
+    test("Then if u write in the creationDate input it should render the new letters writed", async () => {
+      const text = "date";
+
+      render(
+        <Wrapper>
+          <Form />
+        </Wrapper>
+      );
+      const inputDate = screen.getByTestId("inputDate");
+
+      await userEvent.type(inputDate, text);
+
+      await waitFor(() => {
+        expect(inputDate).toHaveValue(text);
+      });
+    });
   });
 });

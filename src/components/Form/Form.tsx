@@ -27,7 +27,7 @@ const Form = (): JSX.Element => {
     newRobot.urlImg === "" ||
     newRobot.speed === 0 ||
     newRobot.endurance === 0;
-  console.log(hasEmptyFields);
+
   const createNewRobot = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     await createRobot(newRobot);
@@ -58,6 +58,7 @@ const Form = (): JSX.Element => {
           <div className="form__group">
             <label htmlFor="urlImg">Url</label>
             <input
+              data-testid="inputUrl"
               type="url"
               id="urlImg"
               value={newRobot.urlImg}
@@ -68,6 +69,7 @@ const Form = (): JSX.Element => {
           <div className="form__group">
             <label htmlFor="creationDate">Creation Date</label>
             <input
+              data-testid="inputDate"
               value={newRobot.creationDate}
               type="text"
               id="creationDate"
