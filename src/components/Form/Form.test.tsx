@@ -1,4 +1,4 @@
-import { render, screen, waitFor } from "@testing-library/react";
+import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import Form from "./Form";
 import * as reactRedux from "react-redux";
 import { store } from "../../features/store/store";
@@ -46,16 +46,9 @@ describe("Given a form component", () => {
           <Form />
         </Wrapper>
       );
-      const inputName = screen.getByRole("textbox", {
-        name: "Name",
-      });
-      await userEvent.keyboard(text);
+      const inputName = screen.getByTestId("inputName");
+      await userEvent.type(inputName, text);
 
-      await render(
-        <Wrapper>
-          <Form />
-        </Wrapper>
-      );
       await waitFor(() => {
         expect(inputName).toHaveValue(text);
       });

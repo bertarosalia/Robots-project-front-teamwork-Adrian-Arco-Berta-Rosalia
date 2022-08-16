@@ -25,9 +25,9 @@ const Form = (): JSX.Element => {
   const hasEmptyFields =
     newRobot.name === "" ||
     newRobot.urlImg === "" ||
-    newRobot.speed === -1 ||
-    newRobot.endurance === -1;
-
+    newRobot.speed === 0 ||
+    newRobot.endurance === 0;
+  console.log(hasEmptyFields);
   const createNewRobot = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     await createRobot(newRobot);
@@ -47,6 +47,7 @@ const Form = (): JSX.Element => {
           <div className="form__group">
             <label htmlFor="name">Name</label>
             <input
+              data-testid="inputName"
               type="text"
               id="name"
               value={newRobot.name}
