@@ -120,5 +120,16 @@ describe("Given a form component", () => {
         expect(inputEndurance).toHaveValue(+numberEndurance);
       });
     });
+
+    test("Then the button should be disabled if the inputs are on default", async () => {
+      render(
+        <Wrapper>
+          <Form />
+        </Wrapper>
+      );
+      const buttonSubmit = screen.getByRole("button");
+
+      expect(buttonSubmit).toBeDisabled();
+    });
   });
 });
