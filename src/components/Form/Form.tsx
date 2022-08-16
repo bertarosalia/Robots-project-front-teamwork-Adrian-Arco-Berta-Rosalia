@@ -80,6 +80,7 @@ const Form = (): JSX.Element => {
           <div className="form__group">
             <label htmlFor="speed">Speed</label>
             <input
+              data-testid="inputSpeed"
               value={newRobot.speed}
               type="number"
               max={10}
@@ -92,6 +93,7 @@ const Form = (): JSX.Element => {
           <div className="form__group">
             <label htmlFor="endurance">Endurance</label>
             <input
+              data-testid="inputEndurance"
               value={newRobot.endurance}
               type="number"
               max={10}

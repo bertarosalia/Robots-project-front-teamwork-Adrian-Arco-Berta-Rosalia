@@ -86,5 +86,39 @@ describe("Given a form component", () => {
         expect(inputDate).toHaveValue(text);
       });
     });
+
+    test("Then if the user write in the speed input it should render what he types", async () => {
+      const numberSpeed = "4";
+
+      render(
+        <Wrapper>
+          <Form />
+        </Wrapper>
+      );
+      const inputSpeed = screen.getByTestId("inputSpeed");
+
+      await userEvent.type(inputSpeed, numberSpeed);
+
+      await waitFor(() => {
+        expect(inputSpeed).toHaveValue(+numberSpeed);
+      });
+    });
+
+    test("Then if the user write in the endurance input it should render what he types", async () => {
+      const numberEndurance = "6";
+
+      render(
+        <Wrapper>
+          <Form />
+        </Wrapper>
+      );
+      const inputEndurance = screen.getByTestId("inputEndurance");
+
+      await userEvent.type(inputEndurance, numberEndurance);
+
+      await waitFor(() => {
+        expect(inputEndurance).toHaveValue(+numberEndurance);
+      });
+    });
   });
 });
